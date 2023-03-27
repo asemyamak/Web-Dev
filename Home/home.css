@@ -1,0 +1,142 @@
+body{
+    background-color: rgb(40, 46, 51);
+}
+header{
+    display: flex;
+    width: auto;
+    height: fit-content;
+    max-height: 10vh;
+    border-radius: 1rem;
+    border: 3px solid orange;
+    padding: 1vh 30px;
+    max-height: 7vh;
+    justify-content: space-between;
+    align-items: center;
+}
+i:hover{
+    cursor: pointer;
+}
+p{
+    color:orange;
+    font-size: 20px;
+    text-align: center;
+}
+.container {
+  display: inline-block;
+  cursor: pointer;
+  width: 6vw;
+}
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #d9d6d6;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+.change .bar1 {transform: translate(0, 11px) rotate(-45deg);}
+.change .bar2 {opacity: 0;}
+.change .bar3 {transform: translate(0, -11px) rotate(45deg);}
+
+.open_menu{
+    display:none;
+    position: absolute;
+    max-width: 40px;
+}
+
+.open_menu_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 210px;
+    max-width: 40px;
+    margin-left: 2.6%;
+}
+
+i{
+    color:white;
+    margin-top:40px;
+    margin-bottom: 40px;
+}
+
+#ms{
+    margin-left:4px;
+}
+
+#listInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#todoInput{
+    height: 4vh;
+    margin: 10px 5% 10px 25%;
+    width: 50%;
+}
+
+#listItem{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#todo_submit{
+    background-color: orange;
+    height: 5vh;
+    border:none;
+    border-radius: 1rem;
+}
+
+.bob{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid orange;
+    border-radius: 1rem;
+    color: orange;
+    margin:10px;
+    height: 4vh;
+    max-height: 10vh;
+    text-align:left;
+    padding: 10px 10px 0px 30px;
+    position: relative;
+    align-items: left;
+    width: 70vw;
+
+}
+
+.bob::before{
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left:8px;
+    margin-top:2px;
+    left: 0;
+}
+
+.buttonDiv{
+    display: flex;
+    justify-content: center;
+    gap:7px;
+}
+
+.buttonDiv .editButton{
+    border: 1px solid orange;
+    background-color: transparent;
+    height: 3vh;
+    width: 3vw;
+    max-width: 3vw;
+    display:block;
+}
+.buttonDiv .deleteButton{
+    border: 1px solid orange;
+    background-color: transparent;
+    height: 3vh;
+    display:block;
+    width: 3vw;
+    max-width: 3vw;
+}
