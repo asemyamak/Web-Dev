@@ -40,7 +40,6 @@ body{
   
   .subnav-content {
     display: none;
-    position: absolute;
     left: 0;
     background-color: rgb(25, 37, 86);
     z-index: 1;
