@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check list page</title>
-    <link rel="stylesheet" href="/Home/home.css">
+    <link rel="stylesheet" href="/Web Dev/Home/home.css">
     <script src="https://kit.fontawesome.com/7127ead7c2.js" crossorigin="anonymous"></script>
-    <script src="/Home/home.js"></script>
-    <script src="/todo/checklist.js"></script>
+    <script src="/Web Dev/Home/home.js"></script>
+    <script src="/checklist.js"></script>
 </head>
 <body>
 <header>
@@ -22,15 +22,16 @@
 </header>
 <div class="open_menu">
         <div class="open_menu_content">
-            <i class="fa-solid fa-house fa-xl" id="house" onclick="location.href='/Home/home.html'"></i>
-            <i class="fa-solid fa-list-check fa-xl" id="checklist" onclick="location.href='/todo/checklist.html'"></i>
-            <i class="fa-solid fa-business-time fa-xl" id="ms" onclick="location.href='/Biomedical Applications/idk.html'"></i>
+            <i class="fa-solid fa-house fa-xl" id="house" onclick="location.href='/Web Dev/Home/home.html'"></i>
+            <i class="fa-solid fa-list-check fa-xl" id="checklist" onclick="location.href='checklist.html'"></i>
+            <i class="fa-solid fa-business-time fa-xl" id="ms" onclick="location.href='/Web Dev/Biomedical Applications/idk.html'"></i>
         </div>
 </div>
 
 <main>
 <div class="list_input">
     <input type="text" placeholder="Type your Thingy here" id="todoInput">
+    <!-- Problem with addItem function -->
     <button onclick="addItem()" id="todoSubmit">Enter</button>
 </div>
 <div id="listItem">

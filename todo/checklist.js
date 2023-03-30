@@ -1,3 +1,6 @@
+// This function adds Input value to a div called div
+// It also adds buttons and shit
+// But right now its not working idk why
 function addItem() {
     var list = document.getElementById("listItem")
     var input = document.getElementById("todoInput");
