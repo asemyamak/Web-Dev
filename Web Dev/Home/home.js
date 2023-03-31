@@ -1,6 +1,4 @@
-
-if (window.addEventListener("DOMContentLoaded", function()
-{
+document.addEventListener('DOMContentLoaded', function() {
     const myDiv = document.querySelector(".container");
     const menu = document.querySelector(".open_menu");
     myDiv.addEventListener("click", function() {
@@ -8,5 +6,4 @@ if (window.addEventListener("DOMContentLoaded", function()
     menu.classList.toggle("open_menu_content");
     console.log("toggling menu is working");
                                             });
-
-}));
+});
