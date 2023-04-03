@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="/Web Dev/Home/home.css">
     <script src="https://kit.fontawesome.com/7127ead7c2.js" crossorigin="anonymous"></script>
     <script src="/Web Dev/Home/home.js"></script>
-    <script src="/checklist.js"></script>
+    <script src="checklist.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
@@ -28,16 +29,12 @@
         </div>
 </div>
 
-<main>
-<div class="list_input">
-    <input type="text" placeholder="Type your Thingy here" id="todoInput">
-    <!-- Problem with addItem function -->
-    <button onclick="addItem()" id="todoSubmit">Enter</button>
-</div>
-<div id="listItem">
-<!-- <div class="bob"></div> -->
-</div>
-</main>
-<!-- Testing -->
+<form>
+    <input type="text" name="todo">
+    <input type="submit" value="Add Todo">
+</form>
+
+<ul id="todos"></ul>
+
 </body>
 </html>

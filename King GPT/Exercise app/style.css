@@ -1,0 +1,208 @@
+body {
+    background-color: #2d2d2d;
+    color: #eaeaea;
+    font-family: Arial, sans-serif;
+    margin:0;
+    height: auto;
+    width: auto;
+  }
+  
+  
+  h1 {
+    color: #fff;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  form input[type="text"],
+  form input[type="number"],
+  form button[type="submit"] {
+    background-color: #3a3a3a;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  form input[type="text"],
+  form input[type="number"] {
+    width: 100%;
+  }
+  
+  form button[type="submit"] {
+    cursor: pointer;
+  }
+  
+  .list{
+        width: 429px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 429px;
+  }
+  
+  li {
+    margin-bottom: 20px;
+    position: relative;
+    width: 429px;
+  }
+  
+  li input[type="number"] {
+    background-color: #3a3a3a;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    width: 50px;
+  }
+
+  li span {
+  padding: 0 5px;
+  }
+
+  .deleteButton {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  #repetitions{
+    width: 70vw;
+  }
+
+  #exercise{
+    width: 70vw;
+  }
+
+  .form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list{
+    display: flex;
+    flex-direction: column;
+    margin-top:30px;
+  }
+
+  #Add{
+    position: absolute;
+    right:14.25%;
+    border:2px solid orange;
+    overflow:hidden;
+  }
+
+.form-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 48%;
+
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+input {
+  display: block;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+li .exercise-name {
+  margin-right: 10px;
+}
+
+li .repetitions {
+  margin-left: 10px;
+}
+
+ul#exercise-list{
+    display: flex;
+    flex-direction: column;
+}
+
+li.listItem{
+    text-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.addButton{
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.resetButton{
+  background-color: #f0f321;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 8px 16px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.insideDiv{
+}
+
+.outerDiv{
+  display: flex;
+  gap:20px;
+  align-items: center;
+}

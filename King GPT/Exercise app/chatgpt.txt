@@ -1,0 +1,15 @@
+This is a JavaScript code that adds functionality to an exercise tracker webpage. Here's a breakdown of what the code does:
+
+The code listens for the DOMContentLoaded event, which means that it waits for the HTML document to finish loading before executing the code inside the function.
+
+The code gets references to the exercise form and the exercise list in the HTML document using the getElementById method.
+
+It then loads the saved exercises from local storage using the getItem method of the localStorage object. The exercises are stored as a JSON string, so the JSON.parse method is used to convert the string back into an array of objects. If there are no saved exercises, the code initializes the exercises array to an empty array.
+
+The code defines a renderList function that is responsible for rendering the exercise list in the HTML document. The function first clears the exercise list by setting the innerHTML property to an empty string. It then loops through the exercises array using the forEach method and creates a list item element for each exercise. For each exercise, it creates a span element for the exercise name, another span element for the repetitions, and two button elements for editing and deleting the exercise. It then appends these elements to the list item and the list item to the exercise list.
+
+The code adds an event listener to the exercise form that listens for the submit event. When the form is submitted, the event listener prevents the default form submission behavior using the preventDefault method. It then gets the values of the exercise name and repetitions fields from the form, creates a new exercise object with these values, adds the exercise to the exercises array, saves the updated array to local storage, and calls the renderList function to update the exercise list in the HTML document.
+
+The code adds event listeners to the edit and delete buttons for each exercise in the exercise list. The edit button opens a prompt that asks the user to choose between replacing or adding repetitions for the exercise. If the user chooses to replace the repetitions, another prompt is opened that asks for the new repetitions value. If the user chooses to add repetitions, another prompt is opened that asks for the additional repetitions value. The code then updates the exercise object with the new or additional repetitions value, saves the updated exercises array to local storage, and calls the renderList function to update the exercise list in the HTML document. The delete button removes the exercise object from the exercises array, saves the updated array to local storage, and calls the renderList function to update the exercise list in the HTML document.
+
+Finally, the code calls the renderList function to render the initial list of exercises when the page loads.

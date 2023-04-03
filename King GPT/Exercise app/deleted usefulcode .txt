@@ -1,0 +1,24 @@
+// Add edit button to list item
+const editButton = document.createElement("button");
+editButton.textContent = "Edit";
+editButton.classList.add('editButton');
+editButton.addEventListener("click", () => {
+  const option = prompt("Choose edit option: 'Replace' or 'Add'", "Replace");
+  if (option !== null) {
+    if (option.toLowerCase() === "replace") {
+      const newRepetitions = prompt("Enter new repetitions:", exercise.repetitions);
+      if (newRepetitions !== null) {
+        exercise.repetitions = parseInt(newRepetitions);
+        localStorage.setItem("exercises", JSON.stringify(exercises));
+        renderList();
+      }
+    } else if (option.toLowerCase() === "add") {
+      const additionalRepetitions = prompt("Enter additional repetitions:", 0);
+      if (additionalRepetitions !== null) {
+        exercise.repetitions += parseInt(additionalRepetitions);
+        localStorage.setItem("exercises", JSON.stringify(exercises));
+        renderList();
+      }
+    }
+  }
+});
