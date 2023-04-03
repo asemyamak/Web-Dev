@@ -126,6 +126,11 @@ exerciseForm.addEventListener("submit", (event) => {
   if (exerciseNameInput.value.length > 12) {
     alert("Exercise name cannot be more than 12 characters. Including space lol");
   }
+  
+// There is still a problem with max length of inputs, must fix
+// If max 12 for exercise name then max 1 for rep
+// If max 11 for exercise name then max 2 for rep
+// Gotta find a solution maybe make new line to fit extra length
 
   // Add exercise to list
   exercises.push({ name: exerciseName, repetitions: repetitions });
@@ -138,10 +143,4 @@ exerciseForm.addEventListener("submit", (event) => {
 
 // Render initial list of exercises
 renderList();
-
 });
-
-// There is still a problem with max length of inputs, must fix
-// If max 12 for exercise name then max 1 for rep
-// If max 11 for exercise name then max 2 for rep
-// Gotta find a solution maybe make new line to fit extra length
