@@ -1,0 +1,66 @@
+form {
+    display: flex;
+    justify-content: center;
+    margin:40px 25% 25px 25%;
+    width: 50%;
+    align-items: center;
+  }
+
+  input:focus {
+    outline: none;
+  }
+  
+  form input[type="text"] {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    background-color: #f2f2f2;
+    flex-grow: 1;
+  }
+  
+  form input[type="submit"] {
+    padding: 10px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  ul#todos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul#todos li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border:2px solid green;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width:60%;
+    margin-left:20%;
+    margin-right:20%;
+    height: 20px;
+  }
+  
+  ul#todos li label {
+    margin-left: 10px;
+    flex-grow: 1;
+  }
+  
+  ul#todos li button {
+    padding: 10px;
+    background-color: #f44336;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
