@@ -1,0 +1,13 @@
+WODUP is a website that provides a platform for CrossFit athletes and coaches to manage and track their workouts, as well as connect with others in the CrossFit community. Here are some of the main functionalities of the website:
+
+Workout tracking: WODUP allows users to log their workouts and track their progress over time. Users can select from a library of pre-built workouts or create their own custom workouts, and record metrics such as weight lifted, reps completed, and time taken.
+
+Performance analytics: WODUP provides users with analytics and insights into their workout performance, such as progress graphs and personal records. These features help users to identify areas where they can improve and set goals for their future workouts.
+
+Coach management: For coaches, WODUP provides tools to manage their clients' workouts and track their progress. Coaches can create workout programs, assign workouts to clients, and monitor their clients' progress in real-time.
+
+Community features: WODUP allows users to connect with other members of the CrossFit community, view other users' workout logs, and join challenges and competitions. These features help to build a sense of community and accountability among users.
+
+Mobile app: WODUP also offers a mobile app, which allows users to log their workouts and access their performance data on the go.
+
+Overall, WODUP is a comprehensive platform for managing and tracking CrossFit workouts, and provides a range of features to help athletes and coaches improve their performance and connect with others in the CrossFit community.

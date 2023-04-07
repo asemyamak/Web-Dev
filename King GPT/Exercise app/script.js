@@ -22,11 +22,11 @@ function renderList() {
     const divInsideListItem = document.createElement("div");
     listItem.classList.add('listItem');
 
-      // Add exercise number to list item
-      const exerciseNumber = document.createElement("span");
-      exerciseNumber.classList.add("exercise-number");
-      exerciseNumber.textContent = count + ". ";
-      listItem.appendChild(exerciseNumber);
+    // Add exercise number to list item
+    const exerciseNumber = document.createElement("span");
+    exerciseNumber.classList.add("exercise-number");
+    exerciseNumber.textContent = count + ". ";
+    listItem.appendChild(exerciseNumber);
 
     // Add exercise name to list item
     const exerciseName = document.createElement("span");

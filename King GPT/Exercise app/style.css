@@ -6,8 +6,7 @@ body {
     height: auto;
     width: auto;
   }
-  
-  
+
   h1 {
     color: #fff;
   }
@@ -71,11 +70,14 @@ body {
     border: none;
     padding: 8px 16px;
     text-decoration: none;
-    display: inline-block;
     font-size: 14px;
     font-weight: bold;
     border-radius: 4px;
+    width: 4rem;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   button:hover {
@@ -176,12 +178,14 @@ li.listItem{
   border: none;
   padding: 8px 16px;
   text-decoration: none;
-  display: inline-block;
   font-size: 14px;
   font-weight: bold;
   border-radius: 4px;
+  width: 4rem;
   cursor: pointer;
-  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .resetButton{
@@ -190,15 +194,20 @@ li.listItem{
   border: none;
   padding: 8px 16px;
   text-decoration: none;
-  display: inline-block;
   font-size: 14px;
   font-weight: bold;
+  text-align: center;
   border-radius: 4px;
   cursor: pointer;
-  margin-right: 10px;
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .insideDiv{
+  display: flex;
+  gap:8px;
 }
 
 .outerDiv{
