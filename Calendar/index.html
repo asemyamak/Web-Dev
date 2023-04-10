@@ -1,43 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-
-    <title>Calendar</title>
+    <title>Editable Calendar</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        .previous-month,
+        .next-month {
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <div class="calender">
-            <div class="title">
-                <i class="fa-solid fa-angles-left month-left"></i>
-                <div class="month"></div>
-                <i class="fa-solid fa-angles-right month-right"></i>
-
-                <i class="fa-solid fa-angles-left years-left"></i>
-                <div class="years">2022</div>
-                <i class="fa-solid fa-angles-right years-right"></i>
-            </div>
-
-            <div class="week">
-                <div>Sun</div>
-                <div>Mon</div>
-                <div>Tue</div>
-                <div>Wed</div>
-                <div>Thu</div>
-                <div>Fri</div>
-                <div>Sat</div>
-            </div>
-
-            <div class="days">
-            </div>
-        </div>
-    </div>
+    <div id="calendar"></div>
+    <script>
+        function createCalendar(year, month) {
+            var calendar = document.getElementById("calendar");
+            calendar.innerHTML = "";
+            var table = document.createElement("table");
+            var headerRow = document.createElement("tr");
+            var previousMonthCell = document.createElement("th");
+            previousMonthCell.classList.add("previous-month");
+            previousMonthCell.innerHTML = "<<";
+            previousMonthCell.addEventListener("click", function() {
+                if (month == 1) {
+                    year--;
+                    month = 12;
+                } else {
+                    month--;
+                }
+                createCalendar(year, month);
+            });
+            headerRow.appendChild(previousMonthCell);
+            var monthCell = document.createElement("th");
+            monthCell.colSpan = 5;
+            monthCell.innerHTML = year + "-" + month.toString().padStart(2, "0");
+            headerRow.appendChild(monthCell);
+            var nextMonthCell = document.createElement("th");
+            nextMonthCell.classList.add("next-month");
+            nextMonthCell.innerHTML = ">>";
+            nextMonthCell.addEventListener("click", function() {
+                if (month == 12) {
+                    year++;
+                    month = 1;
+                } else {
+                    month++;
+                }
+                createCalendar(year, month);
+            });
+            headerRow.appendChild(nextMonthCell);
+            table.appendChild(headerRow);
+            var daysOfWeekRow = document.createElement("tr");
+            var daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+            for (var i = 0; i < daysOfWeek.length; i++) {
+                var dayOfWeekCell = document.createElement("th");
+                dayOfWeekCell.innerHTML = daysOfWeek[i];
+                daysOfWeekRow.appendChild(dayOfWeekCell);
+            }
+            table.appendChild(daysOfWeekRow);
+            var firstDayOfMonth = new Date(year, month - 1, 1).getDay();
+            var daysInMonth = new Date(year, month, 0).getDate();
+            var day = 1;
+            var row = document.createElement("tr");
+            for (var i = 0; i < firstDayOfMonth; i++) {
+                var cell = document.createElement("td");
+                row.appendChild(cell);
+            }
+            for (var i = 0; i < daysInMonth; i++) {
+                var cell = document.createElement("td");
+                cell.innerHTML = day;
+                cell.setAttribute("data-date", year + "-" + month + "-" + day);
+                cell.addEventListener("click", function() {
+                    var date = this.getAttribute("data-date");
+                    var event = prompt("Add event for " + date);
+                    if (event != null) {
+                        this.innerHTML += "<br>" + event;
+                    }
+                });
+                day++;
+                row.appendChild(cell);
+                if (row.children.length == 7) {
+                    table.appendChild(row);
+                    row = document.createElement("tr");
+                }
+            }
+            // Fill in remaining cells
+            while (row.children.length < 7) {
+                var cell = document.createElement("td");
+                row.appendChild(cell);
+            }
+            table.appendChild(row);
+            calendar.appendChild(table);
+        }
+        // Get current date
+        var today = new Date();
+        var currentYear = today.getFullYear();
+        var currentMonth = today.getMonth() + 1;
+        // Create calendar for current month
+        createCalendar(currentYear, currentMonth);
+    </script>
 </body>
 </html>
